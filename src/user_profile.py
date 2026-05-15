@@ -71,7 +71,7 @@ class UserProfile:
         Returns:
             True if password meets requirements, False otherwise
         """
-        regex = r'^(?=^[A-Z])(?=.*[a-z]?)(?=.*\d)(?=.*[@$!%*?&])[A-z\d@$!%*?&]{8,}$'
+        regex = r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$'
         return re.match(regex, password) is not None
     
     @staticmethod

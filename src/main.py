@@ -43,6 +43,7 @@ def _write_output(obj, output_path: Optional[str]):
         output_file_path = Path(output_path)
         with output_file_path.open(mode="w") as file_handle:
             json.dump(obj, file_handle, indent=4)
+
     else:
         json.dump(obj, sys.stdout, indent=4)
         sys.stdout.write('\n')
